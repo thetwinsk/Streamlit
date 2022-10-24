@@ -24,11 +24,11 @@ st.title("Loan Prediction")
 #classifier_name = st.selectbox("Select Classifier", ("Naive Bayes -Bernoulli",
 #                                                     "KNN", "SVM", "Random Forest")) #"Logistic Regression",
 
-path = '/Users/kaylanguyen/Documents/babydragon/OurProjects/LoanPrediction/'
-X = pd.read_csv(path + 'X_loan.csv')
+#path = '/Users/kaylanguyen/Documents/babydragon/OurProjects/LoanPrediction/'
+X = pd.read_csv('X_loan.csv')
 
 from sklearn.utils.validation import column_or_1d
-y = pd.read_csv(path + 'y_loan.csv')
+y = pd.read_csv('y_loan.csv')
 y = column_or_1d(y, warn=False)
 
 # def get_dataset(dataset_name):
