@@ -101,7 +101,8 @@ loanterm = st.number_input('Which term (months) would you like to tend? ',
                            min_value=36, max_value=480, step=12)
 
 X_input = [[income, coincome, loanamount, loanterm]]
-y_result = clf.predict(X_input)
+X_input_scaled = min_max_scaler.fit(X_input)
+y_result = clf.predict(X_input_scaled)
 st.write('Your result is...')
 if y_result == 1:
     st.write('Approval.')
